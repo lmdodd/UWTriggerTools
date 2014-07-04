@@ -89,7 +89,7 @@ def compare_efficiencies(ntuple, variable, l1PtCut, binning, filename,
     )
     num_l1g = make_plot(
         ntuple, variable,
-        "l1gMatch && %0.2f * l1gPt > %0.2f" % (L1G_CALIB_FACTOR, l1PtCut),
+        "l1gMatch && l1gPt > %0.2f" % ( l1PtCut),
         binning
     )
     num_l1 = make_plot(

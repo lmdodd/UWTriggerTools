@@ -37,11 +37,6 @@ else:
 
 
 
-####### Calibration factor ####
-L1_CALIB_FACTOR = 1.0
-L1G_CALIB_FACTOR = 1.0
-
-
 #####################################
 #Get Jet Eff NTUPLE                 #
 #####################################

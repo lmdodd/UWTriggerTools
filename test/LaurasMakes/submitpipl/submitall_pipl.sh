@@ -1,0 +1,10 @@
+source submit_pipl_pt10.sh 07-04
+source submit_pipl_pt15.sh 07-04
+source submit_pipl_pt20.sh 07-04
+source submit_pipl_pt25.sh 07-04
+source submit_pipl_pt30.sh 07-04
+source submit_pipl_pt35.sh 07-04
+source submit_pipl_pt40.sh 07-04
+source submit_pipl_pt45.sh 07-04
+source submit_pipl_pt50.sh 07-04
+source submit_pipl_pt55.sh 07-04

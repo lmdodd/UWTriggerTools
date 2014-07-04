@@ -24,6 +24,7 @@ from FWCore.ParameterSet.VarParsing import VarParsing
 options = VarParsing ('analysis')
 # Set useful defaults
 #options.inputFiles = '/store/user/tapas/ETauSkim/skim_12_1_erV.root'
+options.inputFiles = '/store/user/ldodd/TT_Tune4C_13TeV-pythia8-tauola/TT_Tune4C_13TeV-pythia8-tauola-tsg_PU40bx25_POSTLS162_V2-v1/fb508503c16d6e4b02bc25104d11f7c2/skim_100_1_B7R.root'
 options.outputFile = "uct_efficiency_tree.root"
 options.register(
     'eicIsolationThreshold',

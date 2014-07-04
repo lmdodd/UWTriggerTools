@@ -1,0 +1,10 @@
+source submit_pi0_pt10.sh 07-04
+source submit_pi0_pt15.sh 07-04
+source submit_pi0_pt20.sh 07-04
+source submit_pi0_pt25.sh 07-04
+source submit_pi0_pt30.sh 07-04
+source submit_pi0_pt35.sh 07-04
+source submit_pi0_pt40.sh 07-04
+source submit_pi0_pt45.sh 07-04
+source submit_pi0_pt50.sh 07-04
+source submit_pi0_pt55.sh 07-04

@@ -1,0 +1,1 @@
+python CalibrationSFECAL.py /cms/laura/pi0_pt_10.root /cms/laura/pi0_pt_15.root /cms/laura/pi0_pt_20.root /cms/laura/pi0_pt_25.root /cms/laura/pi0_pt_30.root /cms/laura/pi0_pt_35.root /cms/laura/pi0_pt_40.root /cms/laura/pi0_pt_45.root /cms/laura/pi0_pt_50.root

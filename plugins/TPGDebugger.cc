@@ -39,12 +39,12 @@ double getEta(int ieta) {
   if(ieta < 0)
     iEta = ieta + 28;
   else if(ieta > 0)
-    iEta = ieta + 27;
+   iEta = ieta + 27;
   return convertTPGEta(iEta);
 }
 
 double getPhi(int iPhi) {
-  // TPG iPhi starts at 1 and goes to 72.  Let's index starting at zero.
+// TPG iPhi starts at 1 and goes to 72.  Let's index starting at zero.
   return convertTPGPhi(iPhi-1);
 }
 

@@ -142,11 +142,6 @@ saveas=saveWhere+'SF_eta.png'
 canvas.SaveAs(saveas)
 
 
-file=ROOT.TFile("outfile.root","RECREATE")
-file.cd()
-canvas.Write()
-
-
 
 canvas
 ntuple_15.Draw("(genPt-maxRegionPt)/genPt>>l15_3(21,-.4,1)","maxRegionPt>0","BOX")
@@ -398,5 +393,43 @@ legend1.Draw("same")
 saveas=saveWhere+'region_resolution_vseta.png'
 canvas.SaveAs(saveas)
 
+
+
+canvas
+ntuple_15.Draw("(genPt-maxRegionPt)/genPt:maxRegionPt_Eta>>l15_8","maxRegionPt>0","BOX")
+ntuple_20.Draw("(genPt-maxRegionPt)/genPt:maxRegionPt_Eta>>l20_8","maxRegionPt>0","BOX")
+ntuple_35.Draw("(genPt-maxRegionPt)/genPt:maxRegionPt_Eta>>l35_8","maxRegionPt>0","BOX")
+ntuple_50.Draw("(genPt-maxRegionPt)/genPt:maxRegionPt_Eta>>l50_8","maxRegionPt>0","BOX")
+l15_8 = ROOT.gDirectory.Get("l15_7")
+l20_8 = ROOT.gDirectory.Get("l20_7")
+l35_8 = ROOT.gDirectory.Get("l35_7")
+l50_8 = ROOT.gDirectory.Get("l50_7")
+l15_8.SetLineColor(ROOT.EColor.kCyan)
+l20_8.SetLineColor(ROOT.EColor.kBlue)
+l35_8.SetLineColor(ROOT.EColor.kRed)
+l50_8.SetLineColor(ROOT.EColor.kMagenta)
+l15_8.SetTitle('region resolution vs region GCT Eta')
+profilel15_8 = l15_7.ProfileX("_profilel15_7")
+profilel20_8 = l20_7.ProfileX("_profilel20_7")
+profilel35_8 = l35_7.ProfileX("_profilel35_7")
+profilel50_8 = l50_7.ProfileX("_profilel50_7")
+profilel15_8.GetYaxis().SetRangeUser(-0.5,1)
+profilel15_8.GetXaxis().SetTitle("Gct Eta")
+profilel15_8.GetYaxis().SetTitle("L1 resolution")
+profilel15_8.SetMarkerStyle(23)
+profilel20_8.SetMarkerStyle(23)
+profilel35_8.SetMarkerStyle(23)
+profilel50_8.SetMarkerStyle(23)
+profilel15_8.SetLineWidth(2)
+profilel20_8.SetLineWidth(2)
+profilel35_8.SetLineWidth(2)
+profilel50_8.SetLineWidth(2)
+profilel15_8.Draw("")
+profilel20_8.Draw("same")
+profilel35_8.Draw("same")
+profilel50_8.Draw("same")
+legend1.Draw("same")
+saveas=saveWhere+''
+canvas.SaveAs(saveas)
 
 

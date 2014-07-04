@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Submit rate ntuple jobs on the ZeroBias3 dataset (2012C)
 EXPECTED_ARGS=1
 if [ $# -ne $EXPECTED_ARGS ]
 then
@@ -8,11 +7,11 @@ then
   exit 1
 fi
 
-farmoutAnalysisJobs $1-WithHF \
+farmoutAnalysisJobs $1 \
   --infer-cmssw-path \
-  --input-file-list=jet_skim_files.txt \
+  --input-file-list=../submission/TTbar25ns.txt \
   --input-files-per-job=1 \
-  makeEfficiencyTree_Jets_cfg.py isMC=0 \
+  makeEfficiencyTree_cfg.py isMC=1 \
     'inputFiles=$inputFileNames' 'outputFile=$outputFileName' 
 
 #farmoutAnalysisJobs $1-NoHF \
